@@ -1,38 +1,88 @@
-.evalue-container {
+.enhanced-evalue-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
 }
-.rating-section {
-  margin-bottom: 10px;
+
+.enhanced-evalue-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8em;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
-.image-section {
+
+.enhanced-rating-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.enhanced-rating-label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.3em;
+  margin-right: 15px;
+  color: #333;
+}
+
+.enhanced-star {
+  cursor: pointer;
+  margin: 0 5px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.enhanced-star:hover {
+  transform: scale(1.2);
+  color: #ffb700;
+}
+
+.enhanced-validate-button {
+  background-color: #ff9834;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.enhanced-validate-button:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+.enhanced-satisfaction-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.enhanced-evalue-container::before {
+  content: "";
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px; /* Ajustez selon vos besoins */
-}
-
-.image-gauche {
-  position: absolute;
-  bottom: 0;
-  left: 90px;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-right: 10px; /* Ajoutez une marge entre l'image gauche et l'image droite */
-}
-
-.image-droite {
-  position: absolute;
-  bottom: 30px;
-  right: 90px;
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  height: 100%;
+  background: linear-gradient(135deg, #ff9834 0%, #f9f9f9 100%);
+  opacity: 0.2;
+  z-index: 0;
 }

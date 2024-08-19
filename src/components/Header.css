@@ -1,46 +1,109 @@
-p {
-  font-family: "Josefin Sans", sans-serif !important;
-  font-weight: 500;
-  font-size: 26px;
-  line-height: 1.7;
-  color: #001f48;
-  margin: 0;
-}
-
-.section-fluid-main {
-  position: absolute;
-  width: calc(100% - 40px);
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: auto; /* Auto margin for centering */
-  margin-right: auto; /* Auto margin for centering */
-  max-width: 1050px;
-  padding-top: 50px;
-  padding-bottom: 90px;
-  align-self: flex-start; /* Updated to align with the start of the flex container */
-  z-index: 3;
-}
-
-.section-row {
+.header-container {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 233, 210, 0.8),
+      rgba(255, 233, 210, 0.5)
+    ),
+    url("../pictures/BG.png") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  color: #333;
 }
 
-.section-col {
-  position: relative;
+.header-image img {
   width: 100%;
-  flex: 0 0 100%;
-  max-width: 100%;
-  padding: 50px;
-  text-align: left;
+  height: auto;
+  filter: brightness(0.7);
 }
-.title {
+
+.header-content {
   text-align: center;
-  font-size: 2em;
-  color: #333;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+}
+
+.header-title {
+  font-size: 2.8rem;
+  color: rgb(237, 154, 133);
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.header-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 5px;
+  background: rgb(255, 233, 210);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+.header-description {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.restaurant-name {
+  font-weight: bold;
+  color: rgb(237, 154, 133);
+}
+
+.header-services-contact {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-services,
+.header-contact {
+  flex: 1;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.header-services h3,
+.header-contact h3 {
+  font-size: 1.8rem;
+  color: rgb(237, 154, 133);
+  margin-bottom: 15px;
+}
+
+.header-services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header-services li {
+  font-size: 1.2rem;
+  color: #666;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgb(255, 152, 34);
+}
+
+.header-contact a {
+  color: rgb(237, 154, 133);
+  text-decoration: none;
+}
+
+.header-contact a:hover {
+  text-decoration: underline;
 }
